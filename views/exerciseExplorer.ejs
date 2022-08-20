@@ -1,0 +1,56 @@
+<%- include("partials/header.ejs")%>
+<div id="exerciseExplorerBody">
+  <br><br>
+    <div class="d-flex justify-content-center" id="searchOptionsEP">
+      <div class="dropdown">
+        <button class="btn dropdown-toggle btn-fit" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="targetBttn">
+          Target
+        </button>
+        <ul class="dropdown-menu">
+          <% for (target of targets) { %>
+          <li><a class="dropdown-item" href="#" name="target" id="<%=target.target%>" style="font-family: 'Montserrat', sans-serif;"><%=target.target%></a></li>
+            <% } %>
+        </ul>
+      </div>
+      <div class="dropdown" style="margin-left:2rem;">
+        <button class="btn dropdown-toggle btn-fit" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="bodyPartBttn">
+          Body Part
+        </button>
+        <ul class="dropdown-menu">
+          <% for (part of parts) { %>
+          <li><a class="dropdown-item" href="#" name="bodyPart" id="<%=part.bodyPart%>" style="font-family: 'Montserrat', sans-serif;"><%=part.bodyPart%></a></li>
+            <% } %>
+        </ul>
+      </div> 
+      <div class="input-group mb-3 w-25" id="searchExercise" style="margin-left:2rem;">
+        <input type="text" class="form-control" placeholder="search" aria-label="search" aria-describedby="button-addon2" id="keyword">
+        <button class="btn btn-fit" type="button" id="button-addon2" name="searchBttn">Search</button>
+      </div>
+    </div>
+              
+    <br><br>
+    <div id="searchMsg"></div>
+  
+    <div class="row row-cols-md-3 g-4 justify-content-center" id="cards" style="width: 80rem;"></div>
+  
+    <div id="workoutModal" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="border:none; background-color: #313131; color:white;">
+            <h5 class="modal-title" style="font-family: 'Nunito', sans-serif;">Workout Information</h5>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close" style="background-color:white;"></button>
+          </div>
+          <div class="modal-body">
+            <div id="workoutInfo" style="font-family: 'Montserrat', sans-serif;"></div>
+          </div>
+          <div class="modal-footer" style="border:none;">
+            <button type="button" class="btn btn-fit" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <br>
+</div>
+<script src="/js/exerciseExplorerScript.js"></script>  
+<%- include("partials/footer.ejs")%>
+  

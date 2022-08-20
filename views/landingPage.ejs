@@ -1,0 +1,90 @@
+<%- include("partials/header.ejs") %>
+<div class="page">
+<div class="landingBody">
+
+    <div class="page-container text-dark">
+
+        <div style="background-color: #01FEAF;
+  text-align: center; border-top-left-radius: 10px;
+  border-top-right-radius: 10px;">
+            <br>
+            <p class="h2 text-black" id="landingWelcome">
+                Welcome,
+                <%= userId[0].firstName %> !
+            </p>
+            <br>
+        </div>
+      <div style="padding: 10px;">
+       
+        <p class="text-black" style="font-family: 'Montserrat', sans-serif;">Last login: <%= userId[0].lastLogin %></p>
+ <h2 class="text-black" style="font-family: 'Montserrat', sans-serif;">Previous Workout:</h2>
+         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#tableData" aria-expanded="false" aria-controls="collapseExample" style="font-family: 'Nunito', sans-serif;">
+    View
+  </button>
+<div class="sessionsTable">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">SessionId</th>
+      <th scope="col">TimeStamp</th>
+      <th scope="col">Resume?</th>
+    </tr>
+  </thead>
+  <tbody class="collapse" id="tableData">
+    <%for(var sess of workouts){%>
+      
+            <tr>
+              <td> <%= sess.sessionId %></td>
+              <td>
+                <%= sess.startTime %></td>
+              <td>
+                <form method ="post" action="/workout/resume">
+                <input type="hidden" name="sessionId" value="<%= sess.sessionId %>">
+                <input type="hidden" name="userId" value="<%= userId[0].userId %>">
+                <button class="btn btn-dark">Resume</button>
+            </form>
+              </td>
+            </tr>
+
+        <%}%>
+        </tbody>
+        </table>
+</div>
+        <br>
+        <a href="/workout" class="btn btn-fit">Start New Workout</a> <br><br><br>
+
+        <div class="text-center">
+          <a href="/profile/edit?userId=<%= userId[0].userId %>" class="btn btn-fit">Update Profile</a>
+  
+          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-left:1rem; font-family: 'Nunito', sans-serif;">
+              Delete Profile
+          </button>
+        </div>
+      </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Are you sure you would like to delete your
+                            profile? </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="/profile/delete?userId=<%= userId[0].userId %>" type="button" class="btn btn-danger" style="font-family: 'Nunito', sans-serif;">Confirm
+                            Delete</a>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="font-family: 'Nunito', sans-serif;">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br>
+          </div>
+<script src="js/profile.js"></script>
+<%- include("partials/footer.ejs") %>

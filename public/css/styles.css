@@ -1,0 +1,277 @@
+  
+body{
+  width: 100%;
+  height: 100%;
+  padding:0;
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  box-sizing: border-box;
+}
+.hero{
+  height: 100vh;
+  background-image: url("../img/background.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.logo{
+  color: white;
+  font-size: 35px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.red-a{
+  color: #FEAF01
+}
+
+#read{
+  background-color: transparent;
+  color: green;
+  border: 2px solid green;
+  padding: 10px 10px 10px 10px;
+  letter-spacing: 5px;
+  border-radius: 25px;
+}
+
+#profile{
+  float: right;
+}
+#cards{
+  margin: auto;
+}
+.col{
+  width: 18rem;
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
+.workoutCard{
+  height: 5rem;
+}
+
+/* Exercise Explorer Page */
+#searchOptionsEP{
+  max-width: 50rem;
+  margin:auto;
+  display:center;
+}
+#workoutInfo{
+  text-align:center;
+}
+/* Sign Up Page */
+#signUpForm{
+ margin:auto;
+ width: 30rem;
+ text-align: left;
+ border-radius: 10px;
+ background-color: white;
+}
+.signUpHeader{
+  background-color: #01FEAF;
+  text-align: center;
+  height: 4rem;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.values{
+  color: #c02121;
+}
+.loginBkGr{
+  background-image: url(/img/hero/hero2.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+}
+.loginBod{
+  margin: auto;
+  width: 500px;
+  max-width: 90%;
+}
+.form-group{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px black;
+}
+#loginH1{
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+#username, #password{
+  width: 100%;
+  height: 40px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid silver;
+}
+
+.loginBod button {
+  margin-left: 50%;
+  margin-top: 5%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 34px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 4px;
+  transition: .4s;
+}
+.loginBod button:hover{
+  opacity: .7;
+}
+.page-container{
+  background-color: white;
+  border-radius: 20px;
+  width: 75vw;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+.aboutContainer{
+  min-height: 100vh;
+}
+.forBKG{
+  background-image: url(/img/hero/hero6.webp);
+  width: 100%;
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ div.aboutInside{
+    padding:10%;
+    backdrop-filter: blur(5px);
+   font-family: 'Montserrat', sans-serif;
+ }
+
+div.aboutInsideBottom{
+  text-align: center;
+}
+/* contact page */
+#contactBody{
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-image: url(/img/hero/hero1.webp);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: left;
+  color: white;
+}
+.page{
+  min-height: 75vh;
+  padding-bottom: 2.5rem;
+}
+.contactInside ul{
+  list-style: none;
+}
+.contactInside{
+  text-align: center;
+  margin: auto;
+}
+.contactInside li:hover{
+  background: #c563f2;
+}
+.contactInside > ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  background: #AF01FE;
+  color: white;
+  border-radius: 10px;
+}
+.contactInside > ul > li{
+  position: relative;
+  cursor: pointer;
+  font-family: poppins;
+  font-size: 14px;
+  letter-spacing: 1px;
+  float: left;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.dropdown-contact{
+  width: 100%;
+  padding: 0; 
+  left: 0;
+}
+.dropdown-contact li{
+  background: #313131;
+  display: none;
+}
+.dropdown-contact li:hover{
+  background: #c563f2;
+}
+.contactInside li:hover > .dropdown-contact li {
+  display: block;
+}
+
+#landingWelcome{
+  text-size: 2rem;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+}
+.landingBody{
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-image: url(/img/hero/hero3.webp);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.formBody{
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-image: url(/img/hero/hero4.webp);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#csumb-logo{
+  width:200px;
+  height:auto;
+}
+.btn-fit{
+  background-color:#AF01FE;
+  border:#AF01FE;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+}
+.btn-fit:hover{
+  background-color:#c563f2;
+  border:#AF01FE:
+}
+footer{
+  font-family: 'Nunito', sans-serif;
+}
+#start, #stop, #reset{
+  font-family: 'Nunito', sans-serif;
+}
+label, span{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
